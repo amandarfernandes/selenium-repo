@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="LearnTestNG" parallel="tests" thread-count="6">
+	<listeners>
+		<listener class-name="TestNGBasics.listeners" />
+	</listeners>
+	
+	<parameter name="URL" value="qaclickacademy.com" />
+		<test parallel="tests" thread-count="3" name="Website Navigation">
+			<classes>
+				<class name="TestNGBasics.test1" />
+				<class name="TestNGBasics.test2" />
+			</classes>
+		</test> <!-- Test -->
+		<test name="Regression Suite">
+			<classes>
+				<class name="TestNGBasics.test3" />
+				<class name="TestNGBasics.parameters" />
+			</classes>
+		</test>
+
+</suite> <!-- LearnTestNG -->

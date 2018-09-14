@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="LearnTestNG">
+  <test thread-count="5" name="Website Navigation">
+    <classes>
+      <class name="TestNGBasics.test1"/>
+      <class name="TestNGBasics.test2">
+      	<methods>
+      		<exclude name="Mobile.*" />
+      	</methods>
+      </class>
+    </classes>
+  </test> <!-- Test -->
+  <test name="Regression Suite">
+  	<classes>
+  		<class name="TestNGBasics.test3">
+  			<methods>
+  				<include name="MyOwn.*"/>
+  			</methods>
+  		</class>	
+  	</classes>
+  </test>
+  
+</suite> <!-- LearnTestNG -->
